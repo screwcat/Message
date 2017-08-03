@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62B61C60-9E72-41C3-A556-D99A5B06B77B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinApp</RootNamespace>
+    <AssemblyName>WinApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>earth.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\UCCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCCustomer.Designer.cs">
+      <DependentUpon>UCCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCPage.Designer.cs">
+      <DependentUpon>UCPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormAddDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormAddDiscount.Designer.cs">
+      <DependentUpon>FormAddDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormCreateCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormCreateCard.Designer.cs">
+      <DependentUpon>FormCreateCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormCreateCardType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormCreateCardType.Designer.cs">
+      <DependentUpon>FormCreateCardType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormEmpDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormEmpDtl.Designer.cs">
+      <DependentUpon>FormEmpDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormMembershipCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormMembershipCard.Designer.cs">
+      <DependentUpon>FormMembershipCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormMemCardDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormMemCardDtl.Designer.cs">
+      <DependentUpon>FormMemCardDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormProdDtl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormProdDtl.Designer.cs">
+      <DependentUpon>FormProdDtl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormRecharge.Designer.cs">
+      <DependentUpon>FormRecharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Admin\FormSetting.Designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormBackPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormBackPassword.Designer.cs">
+      <DependentUpon>FormBackPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormCashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormCashier.Designer.cs">
+      <DependentUpon>FormCashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormDataBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormDataBackup.Designer.cs">
+      <DependentUpon>FormDataBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormMemCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormMemCard.Designer.cs">
+      <DependentUpon>FormMemCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormMergeBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormMergeBill.Designer.cs">
+      <DependentUpon>FormMergeBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormSale.Designer.cs">
+      <DependentUpon>FormSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormSelect.Designer.cs">
+      <DependentUpon>FormSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\FormShift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\FormShift.Designer.cs">
+      <DependentUpon>FormShift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Report\FormChangeWaiter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Report\FormChangeWaiter.Designer.cs">
+      <DependentUpon>FormChangeWaiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Report\FormExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Report\FormExport.Designer.cs">
+      <DependentUpon>FormExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Report\FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Report\FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Report\FormSaleDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Report\FormSaleDetail.Designer.cs">
+      <DependentUpon>FormSaleDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForm\Report\FormSaleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForm\Report\FormSaleList.Designer.cs">
+      <DependentUpon>FormSaleList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\UCCustomer.resx">
+      <DependentUpon>UCCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCPage.resx">
+      <DependentUpon>UCPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormAddDiscount.resx">
+      <DependentUpon>FormAddDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormCreateCard.resx">
+      <DependentUpon>FormCreateCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormCreateCardType.resx">
+      <DependentUpon>FormCreateCardType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormEmpDtl.resx">
+      <DependentUpon>FormEmpDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormMembershipCard.resx">
+      <DependentUpon>FormMembershipCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormMemCardDtl.resx">
+      <DependentUpon>FormMemCardDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormProdDtl.resx">
+      <DependentUpon>FormProdDtl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormRecharge.resx">
+      <DependentUpon>FormRecharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Admin\FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormBackPassword.resx">
+      <DependentUpon>FormBackPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormCashier.resx">
+      <DependentUpon>FormCashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormDataBackup.resx">
+      <DependentUpon>FormDataBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormMemCard.resx">
+      <DependentUpon>FormMemCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormMergeBill.resx">
+      <DependentUpon>FormMergeBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormSale.resx">
+      <DependentUpon>FormSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormSelect.resx">
+      <DependentUpon>FormSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\FormShift.resx">
+      <DependentUpon>FormShift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Report\FormChangeWaiter.resx">
+      <DependentUpon>FormChangeWaiter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Report\FormExport.resx">
+      <DependentUpon>FormExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Report\FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Report\FormSaleDetail.resx">
+      <DependentUpon>FormSaleDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForm\Report\FormSaleList.resx">
+      <DependentUpon>FormSaleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExportConf\TempDetail.xls" />
+    <None Include="ExportConf\TempSummary.xls" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{6BC62CBA-35AC-4BC3-A9CB-23A4B5FB7159}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Backup\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="earth.ico" />
+    <Content Include="ExportConf\kqzdhz.XML" />
+    <Content Include="ExportConf\kqzdmx.XML" />
+    <None Include="Resources\kqzdgate.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

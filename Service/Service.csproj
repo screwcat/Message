@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BC62CBA-35AC-4BC3-A9CB-23A4B5FB7159}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Service</RootNamespace>
+    <AssemblyName>Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.2.329, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.5.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.0.6.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ControlCommon.cs" />
+    <Compile Include="Common\DateTimeCommon.cs" />
+    <Compile Include="Common\DecryptEncrypt.cs" />
+    <Compile Include="Common\ExcelExport.cs" />
+    <Compile Include="Common\HttpProc.cs" />
+    <Compile Include="Common\PinyinCommon.cs" />
+    <Compile Include="Common\PrintCommon.cs" />
+    <Compile Include="Common\XmlMethod.cs" />
+    <Compile Include="Data\DBHelperAccess.cs" />
+    <Compile Include="Data\DBInstance.cs" />
+    <Compile Include="Data\DB\AccessCore.cs" />
+    <Compile Include="Data\DB\Core\Delete.cs" />
+    <Compile Include="Data\DB\Core\ExpressFormat.cs" />
+    <Compile Include="Data\DB\Core\Insert.cs" />
+    <Compile Include="Data\DB\Core\OrderBy.cs" />
+    <Compile Include="Data\DB\Core\Record.cs" />
+    <Compile Include="Data\DB\Core\Select.cs" />
+    <Compile Include="Data\DB\Core\Update.cs" />
+    <Compile Include="Data\DB\DBCoreBase.cs" />
+    <Compile Include="Data\DB\DBFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\DB\DBType.cs" />
+    <Compile Include="Data\DB\IDBCore.cs" />
+    <Compile Include="Data\DB\MSSqlCore.cs" />
+    <Compile Include="Data\DB\MySqlCore.cs" />
+    <Compile Include="Data\DB\OracleCore.cs" />
+    <Compile Include="Data\DB\SybaseCore.cs" />
+    <Compile Include="Data\DB\XMLCore.cs" />
+    <Compile Include="Data\ExecuteProcedure.cs" />
+    <Compile Include="Data\ExecuteSql.cs" />
+    <Compile Include="Entity\Attribute\EntityBase.cs" />
+    <Compile Include="Entity\Attribute\PrimaryKeyAttribute.cs" />
+    <Compile Include="Entity\Attribute\PropertyAttribute.cs" />
+    <Compile Include="Entity\Attribute\TableAttribute.cs" />
+    <Compile Include="Entity\CardType.cs" />
+    <Compile Include="Entity\ConsumptionRecords.cs" />
+    <Compile Include="Entity\Discount.cs" />
+    <Compile Include="Entity\Employee.cs" />
+    <Compile Include="Entity\MemberCard.cs" />
+    <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\ProductSpec.cs" />
+    <Compile Include="Entity\ProductUnit.cs" />
+    <Compile Include="Entity\Sale.cs" />
+    <Compile Include="Entity\Sale_Detail.cs" />
+    <Compile Include="Entity\ShiftInfo.cs" />
+    <Compile Include="Entity\UserRole.cs" />
+    <Compile Include="IO\DirectoryOperate.cs" />
+    <Compile Include="IO\ExcelOperate.cs" />
+    <Compile Include="IO\FileOperate.cs" />
+    <Compile Include="IO\StrToPinyin.cs" />
+    <Compile Include="IO\XMLOperate.cs" />
+    <Compile Include="IO\Zip.cs" />
+    <Compile Include="Log\ReturnMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\AjaxPro.2.dll" />
+    <Content Include="Library\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Library\Microsoft.Practices.EnterpriseLibrary.Common.dll" />
+    <Content Include="Library\Microsoft.Practices.EnterpriseLibrary.Data.dll" />
+    <Content Include="Library\Microsoft.Practices.ObjectBuilder.dll" />
+    <Content Include="Library\MySql.Data.dll" />
+    <Content Include="Library\NPOI.dll" />
+    <Content Include="Library\NPOI.OOXML.dll" />
+    <Content Include="Library\NPOI.OOXML.XML" />
+    <Content Include="Library\NPOI.OpenXml4Net.dll" />
+    <Content Include="Library\NPOI.OpenXml4Net.XML" />
+    <Content Include="Library\NPOI.OpenXmlFormats.dll" />
+    <Content Include="Library\NPOI.XML" />
+    <Content Include="Library\Oracle.DataAccess.dll" />
+    <Content Include="Library\Sybase.Data.AseClient.dll" />
+    <Content Include="Library\sybdrvodb.dll" />
+    <Content Include="Library\sybdrvssl.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
